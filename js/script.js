@@ -1,18 +1,18 @@
 /* If you're feeling fancy you can add interactivity to your site with Javascript */
 var diff = 0;
-var date = Date.now();
+var date = performance.now();
 var player
 
 window.setInterval(function() {
   loop()
-}, 50)
+}, 20)
 
 function loop(){
-  diff = Date.now()-date;
+  diff = performance.now()-date;
   updateTemp()
   updateHTML()
   calc(diff/1000*tmp.offlineMult,diff/1000)
-  date = Date.now()
+  date = performance.now()
   player.offline.current = date
 }
 
