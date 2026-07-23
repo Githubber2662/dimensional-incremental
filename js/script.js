@@ -5,7 +5,7 @@ var player
 
 window.setInterval(function() {
   loop()
-}, 20)
+}, 1)
 
 function loop(){
   diff = performance.now()-date;
